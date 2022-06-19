@@ -25,7 +25,7 @@
                         {{selectedCountry.id}}
                     </li>
                     <li class="list-group-item">
-                        <img :src="getImgUrl(selectedCountry.img)" class="img-fluid" />
+                        <img :src="(selectedCountry.img)" class="img-fluid" />
                     </li>
                     <li class="list-group-item">
                         {{selectedCountry.name}}
@@ -73,7 +73,7 @@ export default {
             console.warn("click")
             this.selectedCountryIndex = index;
         },
-        
+       
     },
     computed: {
         selectedCountry(){
@@ -85,9 +85,6 @@ export default {
         isExpensive(){
             return this.countryData.countries[this.selectedCountryIndex].cost > 1000;
         },
-        // inSale(){
-        //     return this.countryData.countries[this.selectedCountryIndex].cost > 800;
-        // },
     },
 };
 </script>
