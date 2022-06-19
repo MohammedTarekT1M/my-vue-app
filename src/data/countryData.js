@@ -18,11 +18,11 @@ const countryData = {
         },
         {
             id: 3,
-            name:'Germany',
-            capital: 'Berlin',
+            name:'France',
+            capital: 'Paris',
             cost: 900,
-            details: 'The capital of Germany',
-            img: 'https://www.germany-visa.org/wp-content/uploads/2021/12/Germany-flag-1024x724.jpg'
+            details: 'The capital of France',
+            img: 'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'
         },
     ]
 }
