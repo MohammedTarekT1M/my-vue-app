@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <h2>selected countries</h2>
+                <h2>Selected Countries</h2>
                 <ul class="list-group">
                     <li class="list-group-item">
                         {{selectedCountry.id}}
