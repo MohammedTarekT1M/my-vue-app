@@ -16,6 +16,16 @@
                             <button @click="increment()" class="btn btn-success px-4">+</button>
                         </div>
                     </div>
+                    <h2>Nieuw land toevoegen:</h2>
+                    <input type="text" v-model="newCountry"/><button class="btn btn-dark" @click="addCountry()">Toevoegen</button>
+                    <h3>{{newCountry}}</h3>
+                    <ul class="list-group">
+                    <li class="list-group-item" v-for="(country, index) in newCountries" :key="index">
+                    {{country}}</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <CountryDetail v-if="selectedCountry" :country="selectedCountry" />
                 </div>
             </div>
             <div class="col-12 col-md-6">
@@ -59,7 +69,9 @@ export default {
         return {
             countryData,
             selectedCountryIndex: 0,
-            counter:0
+            counter:0,
+            newCountry: "",
+            newCountries: [],
         };
     },
     methods: {
@@ -73,6 +85,10 @@ export default {
             console.warn("click")
             this.selectedCountryIndex = index;
         },
+        addCountry() {
+            this.newCountries.push(this.newCountry);
+            this.newCountry = "";
+        }
        
     },
     computed: {
